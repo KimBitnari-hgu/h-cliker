@@ -54,24 +54,19 @@
 					return false;
 				}
 			});
+			$(function(){ 
+				$("#alert-success").hide(); 
+				$("#alert-danger").hide(); 
+				$("input").keyup(function(){ 
+					var pwd1=$("#pw").val(); 
+					var pwd2=$("#inputPassword").val(); 
+					if(pwd1 != "" || pwd2 != ""){ 
+						if(pwd1 == pwd2){ $("#alert-success").show(); 
+						$("#alert-danger").hide(); 
+						$("#submit").removeAttr("disabled"); }else{ $("#alert-success").hide(); $("#alert-danger").show(); $("#submit").attr("disabled", "disabled"); } } }); });
+
 		});
-	    $('.form-control').focusout(function () {
-	        var pwd1 = $("#pw").val();
-	        var pwd2 = $("#inputPassword").val();
-	 
-	        if ( pwd1 != '' && pwd2 == '' ) {
-	            null;
-	        } else if (pwd1 != "" || pwd2 != "") {
-	            if (pwd1 == pwd2) {
-	                $("#alert-success").css('display', 'inline-block');
-	                $("#alert-danger").css('display', 'none');
-	            } else {
-	                alert("비밀번호가 일치하지 않습니다. 비밀번호를 재확인해주세요.");
-	                $("#alert-success").css('display', 'none');
-	                $("#alert-danger").css('display', 'inline-block');
-	            }
-	        }
-	    });
+		
 </script>
 <body class="text-center" style="background:white">
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
@@ -94,11 +89,14 @@
 				</div>
 				<label for="inputPassword" class="sr-only">Confirm_Password</label> 
 				<input type="password" id="inputPassword" class="form-control" placeholder="Confirm_Password" required><br>
-				
+				<div class="alert alert-success" id="alert-success">비밀번호가 일치합니다.</div> 
+				<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다.</div>​
+
 				<div class="form-group has-feedback">
-					<button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">회원가입</button>
+					<button class="btn btn-lg btn-primary btn-block" type="submit" id="submit" onclick="test()">회원가입</button>
 					<button class="btn btn-lg btn-primary btn-block" type="button" onclick="location.href='./login'">취소</button>
 				</div>
 			</form>
+
 	</body>
 </html>

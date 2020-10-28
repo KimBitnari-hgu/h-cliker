@@ -16,7 +16,7 @@ public interface SurveyMapper {
 	public int answerInsert(AnswerVO answer) throws Exception;*/
 	
 	public List<SurveyVO> readSurvey(int room_id) throws Exception;
-	
+	public int roomusercount(int room_id) throws Exception;
 	public RoomVO read(int room_id) throws Exception;
 
 }

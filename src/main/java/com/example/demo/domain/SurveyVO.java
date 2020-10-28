@@ -12,6 +12,7 @@ public class SurveyVO {
 	private boolean status;
 	private Timestamp reg_date;
 
+
 	public int getSrv_id() {
 		return srv_id;
 	}

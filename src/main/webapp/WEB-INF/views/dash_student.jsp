@@ -17,10 +17,13 @@
 
   <title>자료실</title>
 
-  <link rel= "stylesheet" type="text/css" href="resources/css/dash_student.css">
+  <link rel= "stylesheet" type="text/css" href="/resources/css/dash_student.css">
 
 </head>
 <body>
+<script type="text/javascript">
+${answerCount}
+</script>
   <!-- Top App Bar -->
   <header class="mdc-top-app-bar" style="background:#6c64a3;">
     <div class="mdc-top-app-bar__row">
@@ -32,10 +35,9 @@
       </section>
     </div>
   </header>
-
   <section class="marg">
   	<h2 class="title is-3">Today 요약</h2>
-    <p class="ex">오늘 17김수현님의 투표완료갯수는 전보다 10%증가하였습니다.</p><hr>
+    <p class="ex">오늘 ${readAnswer.user_id}님의 투표완료갯수는 전보다 10%증가하였습니다.</p><hr>
     <div class="complete">
       <div id="chart" class="left"></div>
       <div id="chart2" class="right"></div>
@@ -75,6 +77,6 @@
   </section>
   <footer></footer>
 
-  <script type="text/javascript" src="resources/js/dash_student.js"></script>
+  <script type="text/javascript" src="/resources/js/dash_student.js"></script>
 
 </body>

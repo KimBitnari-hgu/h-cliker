@@ -8,6 +8,7 @@ import com.example.demo.domain.SurveyVO;
 public interface SurveyService {
 
 	public List<SurveyVO> readSurvey(int room_id) throws Exception;
-	
 	public RoomVO read(int room_id) throws Exception;
+
+
 }

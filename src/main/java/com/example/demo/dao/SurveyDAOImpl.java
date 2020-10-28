@@ -22,5 +22,7 @@ public class SurveyDAOImpl implements SurveyDAO {
 	public RoomVO read(int room_id) throws Exception{
 		return sql.selectOne("com.example.demo.mappers.SurveyMapper.read",room_id);
 	}
+
+
 	
 }

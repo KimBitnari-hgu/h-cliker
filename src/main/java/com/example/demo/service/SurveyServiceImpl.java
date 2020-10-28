@@ -25,4 +25,6 @@ public class SurveyServiceImpl implements SurveyService {
 		return dao.read(room_id);
 		
 	}
+
+
 }

@@ -39,14 +39,6 @@ public class RoomController {
         
         return "main"; //생성할 jsp
 	}
-	/*@RequestMapping(value="/enterProc") //메인 리스트 화면 호출  
-    public String plist(Model model, HttpServletRequest request,@RequestParam String code) throws Exception{
-		logger.info("plist");
- 
-        model.addAttribute("plist", roomservice.plist(code));
-        
-        return "redirect:/main"; //생성할 jsp
-	}*/
 	
 	@RequestMapping(value="/mroom", method = RequestMethod.GET) //mroom 디테일페이지 이동
 	private String roomDetail(RoomVO RoomVO, Model model) throws Exception{
@@ -89,7 +81,7 @@ public class RoomController {
 	@RequestMapping("/delete/{room_id}") //mroom 삭제
     private String roomDelete(@PathVariable int room_id) throws Exception{
        
-        roomservice.roomDelete(room_id);
+       roomservice.roomDelete(room_id);
         
         return "redirect:/main";
     }
