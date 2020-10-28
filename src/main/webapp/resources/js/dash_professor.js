@@ -42,12 +42,12 @@ Chart.defaults.global = {
   onAnimationComplete: function() {}
   
   
-  <script language=JavaScript>
+<script language=JavaScript>
     var data_name= [];
     var data_time=[]; 
-     for(var i= 0 ; i < arr.length; i ++){    
-            data_name[i] = arr[i].survey_name;
-            data_time[i] =arr[i].reg_date
+     for(var i= 0 ; i < arr_x.length; i ++){    
+            data_name[i] = arr_x[i].survey_name;
+            data_time[i] =arr_x[i].reg_date
         }
 </script>
 };
@@ -55,7 +55,7 @@ Chart.defaults.global = {
 // BEGIN BAR CHART ============================================
 
 var barData = {
-  labels: [data_time]
+  labels: data_time,
   datasets: [{
     label: "My dataset",
     fillColor: "rgba(159, 131, 201,0.5)",

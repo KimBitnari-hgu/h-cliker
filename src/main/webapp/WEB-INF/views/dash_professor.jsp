@@ -34,7 +34,7 @@
 		System.out.println(average_time);
 		System.out.println(surveyList.survey_name);
 		
-	</script>
+</script>
 
 		
   <!-- Top App Bar -->
