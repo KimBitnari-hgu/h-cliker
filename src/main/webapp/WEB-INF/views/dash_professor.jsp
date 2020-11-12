@@ -18,21 +18,18 @@
 <body>
 <script type="text/javascript">
 
-	<c:set var = "sum" value = "0" />
-	<c:set var = "usercount" value = "0" />
+	var sum = new Date();
+	var usercount = 0;
 		var arr_x = new Array();
-
+		
 		<c:forEach items="${readSurvey}" var="surveyList" varStatus="status"> 
-		 	<c:set var= "sum" value="${sum + surveyList.end_time}"/>
-		 	<c:set var = "usercount" value = "${status.count}" />
+		 	sum = sum + "${surveyList.end_time}";
+		 	usercount = "${status.count}";
 		 	arr_x.push({
 				survey_name: "${surveyList.survey_name}"
 		        ,reg_date : "${surveyList.reg_date}"});
 		</c:forEach>
-		var average_time = sum / usercount;
-		average_time = ${average_time};
-		System.out.println(average_time);
-		System.out.println(surveyList.survey_name);
+		var average_time = 13;
 		
 </script>
 

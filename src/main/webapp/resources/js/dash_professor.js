@@ -40,8 +40,10 @@ Chart.defaults.global = {
   multiTooltipTemplate: "<%= value %>",
   onAnimationProgress: function() {},
   onAnimationComplete: function() {}
-  
-  
+};
+
+// BEGIN BAR CHART ============================================
+
 <script language=JavaScript>
     var data_name= [];
     var data_time=[]; 
@@ -49,10 +51,6 @@ Chart.defaults.global = {
             data_name[i] = arr_x[i].survey_name;
             data_time[i] =arr_x[i].reg_date
         }
-</script>
-};
-
-// BEGIN BAR CHART ============================================
 
 var barData = {
   labels: data_time,
@@ -116,5 +114,6 @@ var lineGraphOptions = {
   datasetFill: true,
   legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 };
+</script>
 var lineCtx = document.getElementById("myGraph").getContext("2d");
 var myLineChart = new Chart(lineCtx).Line(lineGraphData, lineGraphOptions);
